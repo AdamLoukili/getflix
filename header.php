@@ -62,7 +62,7 @@
 </form>
   </div >
   <!--Affichage de l'icone panier-->
-  <i id="shop" class="fas fa-shopping-cart fa-2x">
+  <i id="shop" class="fas fa-shopping-cart fa-2x" onclick="toggling()">
   
   <div id="popUp"><ul id="orderList"></ul></div>
   
@@ -73,7 +73,25 @@
     </div>
   </i>
   
-
+<script>
+let stating = true;
+let popUping = document.getElementById('popUp');
+function toggling(){
+  if(stating){
+    popUping.style.visibility = 'visible';
+    stating = false;
+  }else {
+    popUping.style.visibility = 'hidden';
+    stating = true;
+  }
+}
+function shutDown(){
+  if(popUping.style.visibility = 'visible'){
+    popUping.style.visibility = 'hidden';
+    stating = true;
+  }
+}
+</script>
 
 <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
 
